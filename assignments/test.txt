@@ -1,0 +1,4 @@
+this is a sample line
+int main() { return 0; }
+another line with main keyword
+no keyword here
