@@ -1,0 +1,24 @@
+Here is the github link for the homework 2
+https://github.com/serzh200419/Homework_2.git
+
+Assignment 0:
+
+In this task, I had to write a program with several fork system calls. Every time the program calls fork(), a new process is created. Since I wrote three fork calls, the result is eight processes in total (because 2³ = 8). I also printed the process IDs to see how the parent and children were related. The program showed me that each process continues execution after the fork, which means many processes can run the same lines of code at the same time.
+
+
+Assignment 1:
+
+I created one child process with fork(). The child was replaced by the program ls using execl(). This way, the child process did not continue the old code but became the ls command and printed the contents of the directory. The parent waited for the child to finish and then printed the message “Parent process done.”
+
+Assignment 2:
+
+The first child process was running ls and the second child process was running date. I used waitpid so the parent would wait for both children to finish before printing the final message “Parent process done.” When I ran the program, first the output of ls appeared, then the date, and at the end the message from the parent.
+
+Assignment 3:
+
+I made the child process execute the echo command using execl(). The argument passed to echo was the text “Hello from the child process.” After the child printed the message, the parent printed “Parent process done.”
+
+Assignment 4:
+
+I had to use grep with command-line arguments. First I created a text file called test.txt with some sample lines. In the child process, I executed grep main test.txt using execl(). This command searched for the word “main” inside the file and printed the lines that matched. After the child finished, the parent printed “Parent process completed.”
+
